@@ -33,13 +33,17 @@ app.post("/", (req, res) => {
   const jsonData = JSON.stringify(data);
 
   const audienceKey = `${process.env.AUDIENCE_KEY}`;
+  console.log(audienceKey);
   const apiKey = `${process.env.API_KEY}`;
+  console.log(apiKey);
 
   const url = `https://us12.api.mailchimp.com/3.0/lists/${audienceKey}`;
+  console.log(url);
   const options = {
     method: "POST",
     auth: `rajat1:${apiKey}`,
   };
+  console.log(options);
 
   const request = https.request(url, options, (response) => {
     if (response.statusCode === 200) {
