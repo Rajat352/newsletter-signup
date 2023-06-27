@@ -46,9 +46,9 @@ app.post("/", (req, res) => {
       res.sendFile(__dirname + "/success.html");
     } else res.sendFile(__dirname + "/faliure.html");
 
-    /* response.on("data", (data) => {
+    response.on("data", (data) => {
       console.log(JSON.parse(data));
-    }); */
+    });
   });
 
   request.write(jsonData);
