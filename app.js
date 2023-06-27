@@ -32,8 +32,8 @@ app.post("/", (req, res) => {
 
   const jsonData = JSON.stringify(data);
 
-  const audienceKey = process.env.AUDIENCE_KEY;
-  const apiKey = process.env.API_KEY;
+  const audienceKey = `${process.env.AUDIENCE_KEY}`;
+  const apiKey = `${process.env.API_KEY}`;
 
   const url = `https://us12.api.mailchimp.com/3.0/lists/${audienceKey}`;
   const options = {
